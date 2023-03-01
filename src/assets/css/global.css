@@ -1,0 +1,58 @@
+h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dd, dt, table, form, body
+    /* body是浏览器默认样式 */
+{
+    margin: 0;
+    padding: 0;
+    /*font-family: '微软雅黑';*/
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+
+input, textarea, select {
+    outline: none; /* 清除输入框边框的线 */
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse; /* 边框线合并 */
+}
+
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    /* 去掉浮动 */
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+*{
+    /*box-sizing: border-box;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+}
