@@ -6,31 +6,41 @@ let routes = [
     {
         path: '/home',  // 首页
         name: 'home',
-        component: () => import('@/views/home.vue')
+        component: () => import('@/views/home.vue'),
+        children: [
+        ]
     },
     {
         path: '/explore',  // 发现页
         name: 'explore',
         component: () => import('@/views/explore.vue')
-    },
+    }
+    ,
     {
         path: '/library',  // 音乐库
         name: 'library',
         component: () => import('@/views/library.vue')
-    },
+    }
+    ,
     {
         path: '/search',
         name: 'search',
         component: () => import('@/views/search.vue')
-    },
+    }
+    ,
     {
         path: '/login',
         name: 'login',
         component: () => import('@/views/login.vue')
     },
     {
-        path:'/',
-        redirect:'/home'
+        path: '/playList',
+        component: () => import('@/views/playList.vue')
+    }
+    ,
+    {
+        path: '/',
+        redirect: '/home'
     }
 ]
 

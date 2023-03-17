@@ -20,14 +20,12 @@ export async function checkStatus(key) {
         url: `/login/qr/check?key=${key}&timestamp=${Date.now()}`
     })
 
-    console.log("checkStatus", res)
-
     return res.data
 }
 
 // 获取登录状态
 export async function getLoginStatus(cookie = '') {
-    const res = await service({
+    return await service({
         method: "post",
         url: `/login/status?timestamp=${Date.now()}`,
         data: {
@@ -37,15 +35,16 @@ export async function getLoginStatus(cookie = '') {
 }
 
 // 获取用户账号信息
-export async function getUserCount() {
-    return await service({
-        url: `/user/account`
-    })
-}
 
 // 传入从 getUserCount 得到的 id，获取用户详情
 export async function getUserDetail(uid) {
     return await service({
         url: `/user/detail?uid=${uid}`
+    })
+}
+
+export async function getUserPlayList(uid){
+    return await service({
+        url:`/user/playlist?uid=${uid}`
     })
 }
